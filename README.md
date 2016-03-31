@@ -14,7 +14,7 @@ subjective.
 
 This can be installed as a Ruby gem by adding the following to your `Gemfile`:
 
-    gem 'date_flag
+    gem 'date_flag'
 
 ## Usage
 

@@ -123,4 +123,6 @@ module DateFlag
   end
 end
 
-ActiveRecord::Base.extend(DateFlag)
+if (defined?(ActiveRecord))
+  ActiveRecord::Base.extend(DateFlag)
+end

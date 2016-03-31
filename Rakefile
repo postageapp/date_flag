@@ -3,16 +3,8 @@ require 'rubygems'
 require 'rake'
 require 'rake/testtask'
 
-require 'hoe'
-
-require './lib/date_flag'
-
-Hoe.new('date_flag', DateFlag::VERSION) do |p|
-  p.developer('The Working Group', 'info@theworkinggroup.ca')
-end
-
 desc 'Default: run unit tests.'
-task :default => :test
+task default: :test
 
 desc 'Test the date_flag plugin.'
 Rake::TestTask.new(:test) do |t|
@@ -22,9 +14,18 @@ Rake::TestTask.new(:test) do |t|
   t.verbose = true
 end
 
-namespace :hoe do
-  task :cultivate do
-    system "touch Manifest.txt; rake check_manifest | grep -v \"(in \" | patch"
-    system "rake debug_gem | grep -v \"(in \" > `basename \\`pwd\\``.gemspec"
-  end
+require 'jeweler'
+
+Jeweler::Tasks.new do |gem|
+  # gem is a Gem::Specification... see http://guides.rubygems.org/specification-reference/ for more options
+  gem.name = "date_flag"
+  gem.summary = %Q{Date field exension for ActiveRecord}
+  gem.description = %Q{Represents boolean fields as DateTime values to trigger events in the future or record when events happened in the past.}
+  gem.email = 'scott@twg.ca'
+  gem.homepage = "http://github.com/twg/date_flag"
+  gem.authors = [
+    "Scott Tadman <scott@twg.ca>"
+  ]
 end
+
+Jeweler::RubygemsDotOrgTasks.new
