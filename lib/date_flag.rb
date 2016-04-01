@@ -36,7 +36,7 @@ module DateFlag
       scope scope_name, lambda { |*flag|
         case (flag.first)
         when false
-          where(field => nul)
+          where(field => nil)
         when true, nil
           where.not(field => nil)
         else
