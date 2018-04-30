@@ -55,4 +55,4 @@ This results in instance methods `publish!` but the scopes are named
 
 ## License
 
-(C) 2009-2016 Scott Tadman, [The Working Group Inc.](http://twg.ca/)
+(C) 2009-2018 Scott Tadman, [The Working Group Inc.](http://twg.ca/)

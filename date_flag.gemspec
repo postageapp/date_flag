@@ -11,7 +11,7 @@ Gem::Specification.new do |s|
   s.required_rubygems_version = Gem::Requirement.new(">= 0".freeze) if s.respond_to? :required_rubygems_version=
   s.require_paths = ["lib".freeze]
   s.authors = ["Scott Tadman <scott@twg.ca>".freeze]
-  s.date = "2018-03-21"
+  s.date = "2018-04-30"
   s.description = "Represents boolean fields as DateTime values to trigger events in the future or record when events happened in the past.".freeze
   s.email = "scott@twg.ca".freeze
   s.extra_rdoc_files = [
