@@ -41,7 +41,7 @@ method to unset the flag with the supplied name. If `:inverse` is set, that
 name will be used by default.
 
 These might be used together like this:
-   
+
     date_flag :was_published_at,
       name: :published,
       scope: :published,
@@ -55,4 +55,4 @@ This results in instance methods `publish!` but the scopes are named
 
 ## License
 
-(C) 2009-2019 Scott Tadman, [PostageApp Ltd.](https://postageapp.com/)
+(C) 2009-2020 Scott Tadman, [PostageApp Ltd.](https://postageapp.com/)

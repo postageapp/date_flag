@@ -1,3 +1,5 @@
+require 'set'
+
 module DateFlag
   VERSION = File.read(File.expand_path('../VERSION', File.dirname(__FILE__))).chomp
 
@@ -14,8 +16,15 @@ module DateFlag
   # m.flagged?     # => true
 
   def date_flag(field, options =  { })
+    unless (defined?(@date_flags))
+      @date_flags = Set.new
+    end
+
     name = (options[:name] ? options[:name] : field.to_s.sub(/_at$/, '')).to_sym
     action = (options[:action] ? options[:action] : name).to_sym
+
+    @date_flags << name
+    @date_flags << :"#{name}_at"
 
     scope_name =
       case (options[:scope])
@@ -63,7 +72,7 @@ module DateFlag
     if (inverse_action = options[:inverse_action] || options[:inverse])
       define_method(:"#{inverse_action}!") do
         write_attribute(field, nil)
-        
+
         save!
       end
     end
@@ -120,6 +129,10 @@ module DateFlag
       write_attribute(field, at_time)
       save!
     end
+  end
+
+  def date_flag?(name)
+    name and @date_flags.include?(name.to_sym)
   end
 end
 
