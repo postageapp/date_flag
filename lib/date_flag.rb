@@ -132,7 +132,10 @@ module DateFlag
   end
 
   def date_flag?(name)
-    name and @date_flags.include?(name.to_sym)
+    return false unless (defined?(@date_flags))
+    return unless (name)
+
+    @date_flags.include?(name.to_sym)
   end
 end
 
