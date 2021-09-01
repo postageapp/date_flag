@@ -149,7 +149,7 @@ GEM
       thor (>= 0.20.3, < 2.0)
     rake (13.0.1)
     rchardet (1.8.0)
-    rdoc (6.2.1)
+    rdoc (6.3.1)
     semver2 (3.4.2)
     sprockets (4.0.2)
       concurrent-ruby (~> 1.0)
