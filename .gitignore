@@ -3,3 +3,7 @@
 *.swp
 .DS_Store
 *.gem
+
+.bundle
+
+Gemfile.lock
