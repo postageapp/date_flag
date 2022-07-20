@@ -21,10 +21,10 @@ Jeweler::Tasks.new do |gem|
   gem.name = "date_flag"
   gem.summary = %Q{Date field exension for ActiveRecord}
   gem.description = %Q{Represents boolean fields as DateTime values to trigger events in the future or record when events happened in the past.}
-  gem.email = 'scott@twg.ca'
-  gem.homepage = "http://github.com/twg/date_flag"
+  gem.email = 'tadman@postageapp.com'
+  gem.homepage = "https://github.com/postageapp/date_flag"
   gem.authors = [
-    "Scott Tadman <scott@twg.ca>"
+    "Scott Tadman <tadman@postageapp.com>"
   ]
 end
 
